@@ -2,6 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+
+import {Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
+
 function App() {
   return (
     <div className="App">
