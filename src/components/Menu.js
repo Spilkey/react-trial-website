@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-BrowserRouter as Router,
+HashRouter,
 Switch,
 Route,
 Link
@@ -18,38 +18,26 @@ import {Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstr
 export default class Menu extends Component {
     render() {
         return (
-            <Router>
+            <HashRouter  basename='/'>
                 <div>
                 <Navbar bg="light" expand="lg" sticky="top">
                     <Navbar.Brand href="home">Samuel Pilkey</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                        <Nav.Link href="home">Home</Nav.Link>
-                        <Nav.Link href="about">About</Nav.Link>
-                        <Nav.Link href="projects">Projects</Nav.Link>
+                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                        <Nav.Link><Link to="/about">About</Link></Nav.Link>
+                        <Nav.Link><Link to="/projects">Projects</Link></Nav.Link>
+                        <Nav.Link><Link to="/contact">Contact</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
-                    </Navbar>
-
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
-                <Switch>
-                    <Route path="/home">
-                    <Home />
-                    </Route>
-                    <Route path="/about">
-                    <About />
-                    </Route>
-                    <Route path="/projects">
-                    <Projects />
-                    </Route>
-                    <Route path="/contact">
-                    <Contact />
-                    </Route>
-                </Switch>
+                </Navbar>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/contact" component={Contact} />
                 </div>
-            </Router>
+            </HashRouter >
         );
     }
 }
