@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-function About() {
+function Contact() {
     return (
         <div class="main-content">
-            <div>Hello About</div>
+            <div>Hello Contact</div>
         </div>
-        
     );
   }
   
-  export default About;
+  export default Contact;

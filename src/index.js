@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Menu from "./components/Menu"
+import Menu from './components/Menu'
 
 
 
@@ -12,18 +12,15 @@ import Menu from "./components/Menu"
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-// class Header extends React.Component{
-//   render() {
-//     return (
-//     );
-//   }
-// }
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello {this.props.name}
+      </div>
+    );
+  }
+}
 
-
-
-// ReactDOM.render(
-// <Header />,
-//   document.getElementById('header')
-// );
 
 ReactDOM.render(<Menu/>, document.getElementById("header"));

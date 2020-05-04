@@ -1,10 +1,10 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --color-main:#062743;
+  --color-secondary:#113a5d;
+  --color-contrast:#c4ffdd;
+  --color-bright:#f9f9f9;
+  font-family: sans-serif;
+  --bar-height: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.main-content{
+  display: grid;
+  grid-gap: 30px;
+  margin: 30px min(10vw, 200px)
+}
+
+.main-content-sm{
+  grid-template-columns:auto auto auto;
+  grid-template-rows: 25vh 25vh 25vh;
+}
+
+.main-content-lg{
+  grid-template-columns:auto auto auto;
+  grid-template-rows: 25vh 25vh 25vh 25vh 25vh;
+}
+.content-bubble{
+  align-self: stretch;
+  border-radius: 15px;
+  border: 1px #ccc solid;
+  background-color: red; /* For browsers that do not support gradients */
+  border: 1px #ccc solid
+}
+
+.content-bubble:nth-child(even){
+  grid-column: 2/ span 2;
+  background-image: linear-gradient(var(--color-bright),var(--color-contrast));
+
+}
+.content-bubble:nth-child(odd){
+  grid-column: auto/ span 2;
+  background-image: linear-gradient(var(--color-contrast), var(--color-bright));
+}
+
+
+
