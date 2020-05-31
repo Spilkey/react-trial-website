@@ -12,15 +12,7 @@ import Menu from './components/Menu'
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-class HelloMessage extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello {this.props.name}
-      </div>
-    );
-  }
-}
+
 
 
 ReactDOM.render(<Menu/>, document.getElementById("header"));

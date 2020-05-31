@@ -6,7 +6,10 @@
   font-family: sans-serif;
   --bar-height: 100px;
 }
-
+body{
+  background-color: var(--color-main);
+  background-image: -webkit-linear-gradient(28deg, var(--color-secondary) 50%, var(--color-main) 50%);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -38,8 +41,6 @@
 }
 .main-content{
   display: grid;
-  grid-gap: 30px;
-  margin: 30px min(10vw, 200px)
 }
 
 .main-content-sm{
@@ -48,26 +49,36 @@
 }
 
 .main-content-lg{
-  grid-template-columns:auto auto auto;
-  grid-template-rows: 25vh 25vh 25vh 25vh 25vh;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-template-columns: repeat(12, 1fr [col-start]);
+  grid-gap: 20px;
+  grid-auto-rows: 200px 200px;
 }
 .content-bubble{
   align-self: stretch;
   border-radius: 15px;
-  border: 1px #ccc solid;
-  background-color: red; /* For browsers that do not support gradients */
-  border: 1px #ccc solid
-}
-
-.content-bubble:nth-child(even){
-  grid-column: 2/ span 2;
-  background-image: linear-gradient(var(--color-bright),var(--color-contrast));
-
-}
-.content-bubble:nth-child(odd){
   grid-column: auto/ span 2;
-  background-image: linear-gradient(var(--color-contrast), var(--color-bright));
+  grid-row: auto/ span 1;
+  margin:20px;
+  padding: 30px;
+  box-shadow: 5px 5px 20px 4px #282c34;
 }
+.content-bubble h3{
+  text-align: center;
+}
+
+#image-main{
+  background-color: var(--color-main);
+  background-image: -webkit-linear-gradient(330deg, var(--color-secondary) 50%, var(--color-main) 50%);
+  grid-column: 1/ span 12;
+  grid-row: 1/ span 3;
+}
+
+
+
 
 
 

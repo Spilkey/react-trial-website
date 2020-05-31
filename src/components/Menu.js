@@ -20,7 +20,7 @@ export default class Menu extends Component {
         return (
             <HashRouter  basename='/'>
                 <div>
-                <Navbar bg="light" expand="lg" sticky="top">
+                <Navbar bg="light" expand="lg" sticky="top" id="header">
                     <Navbar.Brand href="home">Samuel Pilkey</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
